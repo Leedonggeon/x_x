@@ -1,0 +1,6 @@
+ config
+ pandas==2.0.0
+ opencv-python
+ Pillow==9.0
+ requests
+ matplotlib==3.7.1
