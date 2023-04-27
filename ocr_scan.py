@@ -128,6 +128,8 @@ def download_image(image_url, path):
     img = Image.open(BytesIO(res.content))
     img.save(path)
     files = [('file', open(path,'rb'))]
+    if os.path.isfile(path):
+        os.remove(path)
     return cv2.imread(path), files
 
 # request ocr info by calling Clova API
